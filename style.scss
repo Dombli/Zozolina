@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@200&display=swap');
+
+$color-main: #cb997e;
+$color-background: #6b705c;
+$color-text: #303952;
+$font-text: 'Raleway', sans-serif;
+$font-header: 'Playfair Display', serif;
+$transition: all 0.5s;
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  box-shadow: none;
+}
+
+body, html {
+  color: $color-text;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  height: 100%;
+  font-family: $font-text;
+}
+
+.splash {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  background-image: url('https://i.postimg.cc/yYk9DKKb/pexels-1440918.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 52%;
+  height: 700px;
+}
+
+.page-intro {
+  margin: auto;
+  text-align: center;
+}
+
+.main-title {
+  margin: 0 0 0 0;
+  font-weight: 900;
+  text-shadow: 1px 1px 1px #6b705c;
+  font-variant: small-caps;
+  font-size: 150px;
+  color: #ffe8d6;
+  font-family: $font-header;
+}
+
+.main-subtitle {
+  padding: 0px 0px;
+  margin: 0px 0 60px 0;
+  color: white;
+  font-family: $font-text;
+  background-color: rgba(183, 183, 164,0.8);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.btn {
+  padding: 18px 24px 18px 24px;
+  margin: 20px 0;
+  font-size: 20px;
+  background-color: #6B705C;
+  color: #ffffff;
+  font-family: $font-text;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: $transition;
+}
+
+.btn:hover {
+  background-color: darken(#6B705C, 9%);
+  color: #ffffff;  
+}
+
+.section-title {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-family: $font-header;
+  font-size: 80px;
+  color: #ffe8d6;
+  background-color: $color-background;
+  text-shadow: 1px 1px 1px #6b705c;
+}
+
+.section-title:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 200px;
+  height: 1.5px;
+  background-color: lighten($color-background, 9%);
+  left: 50%;
+  bottom: -16px;
+  margin-left: -100px; 
+  margin-bottom: 25px;
+}
+
+.about {
+  background-color: $color-background;
+
+}
+
+.section-intro {
+  color: #ffffff; 
+  margin-left: 0px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  margin: 0;
+  background-color: lighten($color-background, 9%);
+}
+
+.features-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15% 0 15%;
+  background-color: lighten($color-background, 30%)
+}
+
+.feature {
+  text-align: center;
+  margin: 60px 0 0 0;
+} 
+
+.feature i {
+    width: 270px;
+    height: 270px;
+    line-height: 270px;
+    border-radius: 15%;
+    color: white;
+    font-size: 250px;
+    background-color: $color-main;
+    text-shadow: 1px 1px 1px #6b705c;
+    transition: $transition;
+}
+
+.feature i:hover {
+    transform: scale(.9, .9);
+}
+
+.feature-title {
+  margin: 24px 0 0 0px;
+  font-family: $font-header;
+  font-size: 60px;
+  font-weight: bold;
+  color: #6B705C;
+  // text-align: center;   ????
+}
+
+.feature-description {
+  margin: 24px 0 20px 0;
+  padding: 0 24px;
+  width: 270px;
+  color: #6B705C;
+}
+
+// I WISH I WAS A CAT
+
+.statement {
+    background-image: url('https://i.postimg.cc/MKN4htQG/pexels-lucas-pezeta-3081408.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 28%;
+    height: 300px;
+    background-attachment: fixed;
+}
+
+.statement p {
+  margin: 0;
+  padding: 60px 40px;
+  font-size: 50px;
+  text-align: left; 
+  color: white;
+  font-family: $font-header;
+}
+
+// QUOTES 
+
+.quotes {
+  background-color: lighten($color-background, 9%)
+}
+
+.quote {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+}
+
+// GALLERY
+
+//section.gallery {
+ // padding: 60px 0 0 0; 
+//}
+
+.gallery-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 0 0 0;
+}
+
+.gallery-item {
+  position: relative;
+  margin: 0;
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item:before {
+  position: absolute;
+  display: none;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; 
+  opacity: 0.4;
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); 
+  font-family: $font-text;
+  color: white;
+  font-size: 40px; 
+}
+
+.gallery-item:hover:before, .gallery-item:hover figcaption {
+  display: block;
+}
+
+// CONTACT
+
+.contact {
+  text-align: center;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 20px;
+  background-color: $color-background;
+  margin: 0;
+}
+
+.social-links li {
+  display: inline-block; 
+  border: 1px solid $color-main;
+  background-color: $color-main;
+  width: 150px; 
+  height: 150px;
+  line-height: 150px;
+  font-size: 140px;
+  border-radius: 50px; 
+  margin: 0 50px;  
+
+}
+
+.social-links li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transition: color .4s;
+}
+
+.social-links li:hover {
+  color: darken(#FFE8D6, 2%);
+}
+
+.social-links li a:hover {
+  color: darken(#FFE8D6, 2%);
+}
+
+.page-footer {
+  background-color: $color-background;
+  color: white;
+}
+
+.page-footer .container {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.page-footer p {
+  margin: 0 10px; 
+}
+
+.navigation {
+  background-color: $color-background;
+  padding: 12px 0;
+  position: fixed; 
+  width: 100%;
+  z-index: 9999;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin: 0 80px; 
+}
+
+.navigation ul li a {
+  font-size: 20px; 
+  font-weight: bold;
+  font-family: $font-header;
+  color: #ddbea9;
+  transition: color .7s;
+  text-decoration: none;
+}
+
+.navigation ul li a:hover {
+  color: lighten(#ddbea9, 30%);
+}
+
